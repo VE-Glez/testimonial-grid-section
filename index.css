@@ -47,6 +47,11 @@ article {
     padding: 40px;
 }
 
+h3{
+    color: var(--Light-gray);
+    font-size: 0.8em;
+}
+
 article header {
     display: flex;
     gap: 20px;
@@ -97,6 +102,10 @@ blockquote {
 }
 .third figcaption {
     color: var(--Very-dark-blackish-blue);
+}
+.third blockquote, .fifth blockquote{
+    color: var(--Very-dark-blackish-blue);
+    opacity: 0.5;
 }
 
 .fourth {
