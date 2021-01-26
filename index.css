@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+
+:root {
+    /* Primary */
+    --Moderat-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+    /* Neutral */
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    margin: 0 auto;
+    width: 80%;
+    height: 70vh;
+    grid: "first" "second" "third" "fourth" "fifth" / 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+article {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+article header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header img {
+    border-radius: 50%;
+    width: 36px;
+}
+
+figure figcaption {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    color: var(--Light-gray);
+}
+
+.first {
+    grid-area: first;
+    color: white;    
+    background: var(--Moderat-violet) url('./images/bg-pattern-quotation.svg') no-repeat right 20% top;
+    background-size: 21%;
+}
+.first img {
+    border:#a881dc solid 2px ;
+}
+
+.first::before {
+    content: '';
+    width: 20px;
+    font-size: 8rem;
+    position: absolute;
+}
+
+.second {
+    grid-area: second;
+    background-color: var(--Very-dark-grayish-blue);
+    color: white;
+}
+
+.third{
+    grid-area: third;
+    background-color: white;
+}
+.third figcaption {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.fourth {
+    grid-area: fourth;
+    background-color: var(--Very-dark-blackish-blue);
+    color: white;
+}
+.fourth img{
+    border: 2px solid var(--Moderat-violet);
+}
+.fifth{
+    grid-area: fifth;
+    background-color: white;
+}
+
+.fifth figcaption{
+    color: var(--Very-dark-blackish-blue);
+}
+
+
+@media (min-width:1440px) {
+    main {
+        
+        grid: "first first second fifth"
+            "third fourth fourth fifth"
+            / 1fr 1fr 1fr 1fr;
+    }
+}
