@@ -25,15 +25,24 @@ html {
 body {
     background-color: var(--Light-grayish-blue);
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    position: relative;
 }
+
+.attribution { font-size: 11px; 
+    text-align: center;
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
 
 main {
     display: grid;
     margin: 0 auto;
     width: 80%;
-    height: 70vh;
+    
     grid: "first" "second" "third" "fourth" "fifth" / 1fr;
     gap: 20px;
     justify-content: center;
