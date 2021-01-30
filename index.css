@@ -41,7 +41,7 @@ body {
 main {
     display: grid;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     
     grid: "first" "second" "third" "fourth" "fifth" / 1fr;
     gap: 20px;
